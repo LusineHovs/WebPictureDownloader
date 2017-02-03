@@ -17,7 +17,7 @@ namespace WebPictureDownloader
             {
                 data = client.DownloadData(url);
             }
-            File.WriteAllBytes(@"C:\Users\L.Hovsepyan\Desktop\img{i}.jpg", data);
+            File.WriteAllBytes(@"C:\Users\L.Hovsepyan\Desktop\img{i}.svg", data);
         }
 
 
@@ -29,18 +29,11 @@ namespace WebPictureDownloader
             int i = 1;
 
 
-            while (string.IsNullOrEmpty(line) /*&& line.Contains(".jpg")*/)
+            while (line!=null && line.Contains(".svg"))
             {
                 ImgSaver(line, i);
                 i++;
             }
-
-            //for (int j = 0; j < i; j++)
-            //{
-            //    ImgSaver(line, j);
-            //}
-
-
 
             swr.Close();
         }
