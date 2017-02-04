@@ -22,9 +22,10 @@ namespace WebPictureDownloader
             //ImageAddressExtractor class execution
             
             // Image address extraction process
-            string fromPath = "C:/Users/L.Hovsepyan/Desktop/file1.html";
-            string toPath = "C:/Users/L.Hovsepyan/Desktop/imglinks1.txt";
-            string finalPath = "C:/Users/L.Hovsepyan/Desktop/imgfinallinkes1.txt";
+
+            string fromPath = path;
+            string toPath = Path.Combine(desktop, "imglinks1.txt");      //"C:/Users/L.Hovsepyan/Desktop/imglinks1.txt";
+            string finalPath = Path.Combine(desktop, "imgfinlinkes1.txt");             //"C:/Users/L.Hovsepyan/Desktop/imgfinallinkes1.txt";
             ImageAddressExtractor.ImgCodeExtractor(fromPath, toPath);
 
             // Image address's final extraction process
