@@ -31,7 +31,7 @@ namespace WebPictureDownloader
             StreamReader file = new StreamReader(toPath);
             while ((line = file.ReadLine()) != null)
             {
-                finalLine += "www.micarmenia.am" + Regex.Match(line, "<img.+?src=[\"'](.+?)[\"'].+?>", RegexOptions.IgnoreCase).Groups[1] + "\r\n";
+                finalLine += "http://www.micarmenia.am" + Regex.Match(line, "<img.+?src=[\"'](.+?)[\"'].+?>", RegexOptions.IgnoreCase).Groups[1] + "\r\n";
             }
             File.WriteAllText(finalPath, finalLine.ToString());
             return finalLine;

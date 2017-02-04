@@ -31,8 +31,11 @@ namespace WebPictureDownloader
             // Image address's final extraction process
             ImageAddressExtractor.ImgCodeCorrector(toPath, finalPath);
             Console.WriteLine(ImageAddressExtractor.ImgCodeCorrector(toPath, finalPath));
+            string str = ImageAddressExtractor.ImgCodeCorrector(toPath, finalPath);
+            
 
             ImageDownloader.AllImgSaver(finalPath);
+            Console.ReadKey();
 
         }
     }
