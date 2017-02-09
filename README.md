@@ -1,3 +1,3 @@
 # WebPictureDownloader
 
-The *WebPictureDownloader* application has very practical 
+The *WebPictureDownloader* application solves very common problem  
